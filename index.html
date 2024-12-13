@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <nav>
+        <div class="logo">GroceryStore</div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for products..." onkeyup="searchProducts()">
+        </div>
+        <div class="auth-links">
+            <a href="login.html">Login</a> | <a href="signup.html">Signup</a>
+        </div>
+        <div class="cart">
+            <a href="cart.html">Cart <span id="cart-count">0</span></a>
+        </div>
+    </nav>
+</header>
+
+<!-- Product Categories -->
+<section class="categories">
+    <h2>Categories</h2>
+    <div class="category-list">
+        <div class="category-item" onclick="filterCategory('stationery')">
+            <img src="images/stationary.jpg" alt="Stationery">
+            <p>Stationery</p>
+        </div>
+        <div class="category-item" onclick="filterCategory('pooja')">
+            <img src="images/pooja-items.jpg" alt="Pooja Items">
+            <p>Pooja Items</p>
+        </div>
+        <div class="category-item" onclick="filterCategory('groceries')">
+            <img src="images/groceries.jpg" alt="Groceries">
+            <p>Groceries</p>
+        </div>
+        <div class="category-item" onclick="filterCategory('kirana')">
+            <img src="images/kirana.jpg" alt="Kirana">
+            <p>Kirana</p>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+        <!-- Dummy Products -->
+        <div class="product-item" data-category="stationery">
+            <img src="images/notebook.jpg" alt="Product 1">
+            <p>Notebook</p>
+            <p class="price">₹50</p>
+            <button onclick="addToCart('Notebook', 50)">Add to Cart</button>
+        </div>
+        <div class="product-item" data-category="pooja">
+            <img src="images/thali.jpg" alt="Product 2">
+            <p>Pooja Thali</p>
+            <p class="price">₹150</p>
+            <button onclick="addToCart('Pooja Thali', 150)">Add to Cart</button>
+        </div>
+        <div class="product-item" data-category="groceries">
+            <img src="images/rice.jpg" alt="Product 3">
+            <p>Rice (1kg)</p>
+            <p class="price">₹40</p>
+            <button onclick="addToCart('Rice', 40)">Add to Cart</button>
+        </div>
+        <div class="product-item" data-category="kirana">
+            <img src="images/oil.jpg" alt="Product 4">
+            <p>Cooking Oil (500ml)</p>
+            <p class="price">₹120</p>
+            <button onclick="addToCart('Cooking Oil', 120)">Add to Cart</button>
+        </div>
+        <div class="product-item" data-category="stationary">
+            <img src="images/pencil-box.jpg" alt="Product 4">
+            <p>pencil-box</p>
+            <p class="price">₹100</p>
+            <button onclick="addToCart('pencil-box', 100)">Add to Cart</button>
+        </div>
+        <div class="product-item" data-category="pooja">
+            <img src="images/agarbathi.jpg" alt="Product 4">
+            <p>Agarbathi</p>
+            <p class="price">₹45</p>
+            <button onclick="addToCart('Agarbathi', 45)">Add to Cart</button>
+        </div>
+        <div class="product-item" data-category="groceries">
+            <img src="images/tomatoes.jpg" alt="Product 4">
+            <p>tomatoes</p>
+            <p class="price">30</p>
+            <button onclick="addToCart('tomatoes', 30)">Add to Cart</button>
+        </div>
+        <div class="product-item" data-category="kirana">
+            <img src="images/tea-powder.jpg" alt="Product 4">
+            <p>tea-powder</p>
+            <p class="price">₹150</p>
+            <button onclick="addToCart('tea-powder', 150)">Add to Cart</button>
+        </div>
+        <div class="product-item" data-category="groceries">
+            <img src="images/Pineapple.jpg" alt="Product 4">
+            <p>pineapple</p>
+            <p class="price">60</p>
+            <button onclick="addToCart('pineapple', 60)">Add to Cart</button>
+        </div>
+        <div class="product-item" data-category="kirana">
+            <img src="images/dairy-milk.jpg" alt="Product 4">
+            <p>Dairy Milk</p>
+            <p class="price">200</p>
+            <button onclick="addToCart('Dairy Milk', 200)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

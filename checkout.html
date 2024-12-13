@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Grocery Store</title>
+    <link rel="stylesheet" href="checkoutstyle.css">
+    <!-- <script src="checkoutscript.js" defer></script> -->
+    <script src="checkoutscript.js" defer></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "OqVWPuY0aUPia9G9z",
+      });
+   })();
+</script>
+
+</head>
+<body>
+
+    <!-- Checkout Container -->
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+
+        <!-- Shipping Address Form -->
+        <div class="address-form">
+            <h3>Enter Shipping Address</h3>
+            <form id="addressForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" name="pincode" required>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <button type="submit" id="submitAddress">Submit Address</button>
+            </form>
+        </div>
+
+        <!-- Final Bill & Summary -->
+        <div class="bill-summary">
+            <h3>Order Summary</h3>
+            <div id="orderDetails">
+                <p><strong>Total Items:</strong> 0</p>
+                <p><strong>Subtotal:</strong> ₹0</p>
+                <p><strong>Taxes (5%):</strong> ₹0</p>
+                <p><strong>Delivery Charges:</strong> ₹0</p>
+                <p><strong>Total Bill:</strong> ₹0</p>
+            </div>
+
+            <h3>Payment Methods</h3>
+            <div class="payment-methods">
+                <label>
+                    <input type="radio" name="payment" value="upi"> UPI
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="debit-card"> Debit Card
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="cash-on-delivery"> Cash on Delivery
+                </label>
+            </div>
+
+            <button id="confirmOrderBtn">Confirm Order</button>
+        </div>
+    </div>
+</body>
+</html>

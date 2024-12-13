@@ -1,0 +1,128 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+}
+
+/* Cart Container */
+.cart-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Cart Items List */
+.cart-items {
+    margin-bottom: 30px;
+}
+
+/* Cart Item */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.cart-item .product-name {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.cart-item .product-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-item .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item .quantity button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.cart-item .remove-btn {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Cart Summary Section */
+.cart-summary {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cart-summary h3 {
+    font-size: 20px;
+}
+
+#totalPrice {
+    font-size: 18px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .cart-container {
+        padding: 20px;
+    }
+
+    .cart-item .product-name,
+    .cart-item .product-price {
+        font-size: 14px;
+    }
+
+    .cart-item .quantity button {
+        font-size: 12px;
+    }
+
+    .checkout-btn {
+        width: 100%;
+    }
+}

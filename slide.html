@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Categories Slider</title>
+    <link rel="stylesheet" href="slidestyle.css">
+</head>
+<body>
+
+    <div class="categories-container">
+        <button class="scroll-btn left" onclick="scrollCategories(-1)">&#10094;</button>
+        
+        <div class="categories-slider" id="categoriesSlider">
+            <div class="category-item">Stationery</div>
+            <div class="category-item">Pooja Items</div>
+            <div class="category-item">Groceries</div>
+            <div class="category-item">General Kirana</div>
+            <div class="category-item">Beverages</div>
+            <div class="category-item">Snacks</div>
+            <div class="category-item">Household</div>
+            <div class="category-item">Fruits & Veggies</div>
+        </div>
+        
+        <button class="scroll-btn right" onclick="scrollCategories(1)">&#10095;</button>
+    </div>
+
+    <script src="slidescript.js"></script>
+</body>
+</html>
